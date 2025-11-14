@@ -1,26 +1,26 @@
 # Таблица переходов состояний
 
-| Исходное состояние       | Переходное состояние     | Событие                  |
-|--------------------------|--------------------------|--------------------------|
-| INITIATED                | CHARGED                  | INITIATE_SUCCESS         |
-| INITIATED                | FAILED                   | INITIATE_FAILED          |
-| CHARGED                  | INTERNAL_FRAUD_CHECK     | CHARGE_SUCCESS           |
-| CHARGED                  | CHARGED                  | CHARGE_RETRY             |
-| INTERNAL_FRAUD_CHECK     | EXTERNAL_FRAUD_CHECK     | INTERNAL_APPROVED        |
-| INTERNAL_FRAUD_CHECK     | REFUNDING                | INTERNAL_REJECTED        |
-| INTERNAL_FRAUD_CHECK     | FAILED                   | INTERNAL_ERROR           |
-| EXTERNAL_FRAUD_CHECK     | FRAUD_MANUAL             | EXTERNAL_MANUAL          |
-| EXTERNAL_FRAUD_CHECK     | CREDITING                | EXTERNAL_APPROVED        |
-| EXTERNAL_FRAUD_CHECK     | REFUNDING                | EXTERNAL_REJECTED        |
-| EXTERNAL_FRAUD_CHECK     | EXTERNAL_FRAUD_CHECK     | EXTERNAL_RETRY           |
-| FRAUD_MANUAL             | CREDITING                | MANUAL_APPROVED          |
-| FRAUD_MANUAL             | REFUNDING                | MANUAL_REJECTED          |
-| CREDITING                | COMPLETED                | CREDIT_SUCCESS           |
-| CREDITING                | REFUNDING                | CREDIT_FAILED            |
-| REFUNDING                | REFUNDED                 | REFUND_SUCCESS           |
-| REFUNDED                 | NOTIFIED_CUSTOMER        | REFUND_COMPLETED         |
-| COMPLETED                | NOTIFIED_CUSTOMER        | PAYMENT_SUCCESS          |
-| REFUNDED                 | NOTIFIED_SECURITY        | FRAUD_DETECTED           |
+| Исходное состояние   | Переходное состояние | Событие           |
+| -------------------- | -------------------- | ----------------- |
+| INITIATED            | CHARGED              | INITIATE_SUCCESS  |
+| INITIATED            | FAILED               | INITIATE_FAILED   |
+| CHARGED              | INTERNAL_FRAUD_CHECK | CHARGE_SUCCESS    |
+| CHARGED              | CHARGED              | CHARGE_RETRY      |
+| INTERNAL_FRAUD_CHECK | EXTERNAL_FRAUD_CHECK | INTERNAL_APPROVED |
+| INTERNAL_FRAUD_CHECK | REFUNDING            | INTERNAL_REJECTED |
+| INTERNAL_FRAUD_CHECK | FAILED               | INTERNAL_ERROR    |
+| EXTERNAL_FRAUD_CHECK | FRAUD_MANUAL         | EXTERNAL_MANUAL   |
+| EXTERNAL_FRAUD_CHECK | CREDITING            | EXTERNAL_APPROVED |
+| EXTERNAL_FRAUD_CHECK | REFUNDING            | EXTERNAL_REJECTED |
+| EXTERNAL_FRAUD_CHECK | EXTERNAL_FRAUD_CHECK | EXTERNAL_RETRY    |
+| FRAUD_MANUAL         | CREDITING            | MANUAL_APPROVED   |
+| FRAUD_MANUAL         | REFUNDING            | MANUAL_REJECTED   |
+| CREDITING            | COMPLETED            | CREDIT_SUCCESS    |
+| CREDITING            | REFUNDING            | CREDIT_FAILED     |
+| REFUNDING            | REFUNDED             | REFUND_SUCCESS    |
+| REFUNDED             | NOTIFIED_CUSTOMER    | REFUND_COMPLETED  |
+| COMPLETED            | NOTIFIED_CUSTOMER    | PAYMENT_SUCCESS   |
+| REFUNDED             | NOTIFIED_SECURITY    | FRAUD_DETECTED    |
 
 ## Описания состояний
 
